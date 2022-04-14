@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+import classnames from 'classnames/bind';
+import { MainDisplay } from './pages/Main-display/MainDisplay';
 
-function App() {
+const cx = classnames.bind(styles)
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={cx('app')}>
+      <MainDisplay/>
     </div>
-  );
+  )
 }
 
-export default App;

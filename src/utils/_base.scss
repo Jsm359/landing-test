@@ -1,0 +1,8 @@
+@import "utils";
+
+.container {
+  @include desktop {
+    width: viewWidth(1120);
+    margin: auto;
+  }
+}

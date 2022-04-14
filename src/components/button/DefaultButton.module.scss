@@ -1,0 +1,46 @@
+@import '../../utils/utils';
+
+.wrapper {
+  opacity: .9;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: bold;
+  color: #FF3693;
+  letter-spacing: .02em;
+  text-align: center;
+  background: none;
+  box-sizing: border-box;
+  border: 1px solid #FF3693;
+  cursor: pointer;
+  transition: .1s;
+  z-index: 1111;
+
+  @include desktop {
+    padding: viewWidth(11) viewWidth(23);
+    font-size: viewWidth(16);
+    border-radius: viewWidth(8);
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &:hover {
+    background:#FF3693;
+
+    span {
+      color: white;
+    } 
+  }
+
+  &:active {
+    background: #CB01CF;
+    span {
+      background: linear-gradient(#FF41AC, #8017FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: table;
+    }
+  }
+}
+
