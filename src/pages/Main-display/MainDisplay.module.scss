@@ -15,27 +15,6 @@
 }
 
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: relativeVh(29);
-  align-items: center;
-}
-
-.logo {
-
-  @include desktop {
-    width: viewWidth(156);
-    height: viewWidth(24);
-  }
-
-  @include mobile {
-    width: widthM(104);
-    height: widthM(16);
-  }
-}
-
-
 .content {
   z-index: 111;
 
@@ -146,6 +125,7 @@
     color: white;
     opacity: .9;
     letter-spacing: .01em;
+    background-color: transparent;
 
     @include desktop {
       font-size: viewWidth(24);

@@ -1,5 +1,5 @@
 import { MainDisplay } from '../pages/Main-display/MainDisplay';
-import { Login } from '../components/Login/Login';
+import { Login } from '../pages/Login/Login';
 import { Navigate } from "react-router-dom";
 
 

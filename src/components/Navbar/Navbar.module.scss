@@ -1,0 +1,38 @@
+@import '../../utils/utils';
+@import '../../utils/base';
+
+.nickname {
+  color: white;
+  @include desktop {
+    margin-right: viewWidth(25);
+  }
+
+  @include mobile {
+    margin-right: widthM(25);
+  }
+}
+
+.btn-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: relativeVh(29);
+  align-items: center;
+}
+
+.logo {
+
+  @include desktop {
+    width: viewWidth(156);
+    height: viewWidth(24);
+  }
+
+  @include mobile {
+    width: widthM(104);
+    height: widthM(16);
+  }
+}

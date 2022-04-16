@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import styles from './MainDisplay.module.scss'
 import classnames from 'classnames/bind';
-import { DefaultButton } from '../../components/button/DefaultButton';
-import { TestButton } from '../../components/button/TestButton';
-
 
 const cx = classnames.bind(styles)
 
@@ -49,32 +46,17 @@ export const MainDisplay = () => {
     }
   }, [setOnline])
 
+
   return (
     <div>
       <div className={cx('wrapper')}>
         <div className={cx('img_preview')} />
-        
         <div className={cx('container')}>
-          <div className={cx('header')}>
-            <div>
-              {/* <Logo className={cx('logo')} /> */}
-            </div>
-            <div>
-              <DefaultButton />
-            </div>
-          </div>
-
           <div className={cx('content')}>
-            <div className={cx('game-icon')}>
-              
-            </div>
-
             <div className={cx('title-wrapper')}>
               <div className={cx('title')}>Быстрый поиск</div>
               <div className={cx('title')}>адекватных</div>
-              <div className={cx('title')}>
-                тиммейтов в<span>CS:GO</span>
-              </div>
+              <div className={cx('title')}>тиммейтов в<span>CS:GO</span></div>
             </div>
 
             <div className={cx('online')}>
@@ -83,12 +65,11 @@ export const MainDisplay = () => {
               </div>
               <div className={cx('online-title')}>Игроков онлайн</div>
             </div>
-            <TestButton id="beta_test_main" />
           </div>
         </div>
       </div>
-
-      <TestButton fixed />
     </div>
   )
 }
+
+

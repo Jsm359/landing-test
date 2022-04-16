@@ -4,10 +4,15 @@ import classnames from 'classnames/bind';
 
 const cx = classnames.bind(styles)
 
-export const DefaultButton = () => {
+export interface DefaultButtonProps {
+  label: string;
+  onClick?:() => void;
+}
+
+export const DefaultButton = ({label, onClick}: DefaultButtonProps) => {
   return (
-    <button className={cx('wrapper')}>
-      <span>Найти тиммейтов</span>
+    <button className={cx('wrapper')} onClick={onClick}>
+      <span>{label}</span>
     </button>
   )
 }
