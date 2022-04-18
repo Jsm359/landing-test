@@ -3,11 +3,14 @@ import styles from './Navbar.module.scss'
 import classnames from 'classnames/bind';
 import { DefaultButton } from '../button/DefaultButton';
 import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { useDispatch } from 'react-redux';
+import { AuthActionCreators } from '../../store/reducers/auth/action-creators';
 
 const cx = classnames.bind(styles)
 
 export const Navbar = () => {
-  const { isAuth } = useTypedSelector(state => state.auth)
+  const { isAuth, user } = useTypedSelector(state => state.auth)
+  const dispatch = useDispatch()
 
   return (
     <div className={cx('container')}>
@@ -18,7 +21,7 @@ export const Navbar = () => {
         <div className={cx('btn-nav')}>
           {isAuth
             ?
-            <><div className={cx('nickname')}>Jsm</div><DefaultButton onClick={() => console.log('Выйти')} label='Выйти' /></>
+            <><div  className={cx('nickname')}>{user.username}</div><DefaultButton onClick={() => dispatch(AuthActionCreators.logout())} label='Выйти' /></>
             :
             <DefaultButton onClick={() => console.log('Войти')} label='Войти' />
           }
@@ -27,3 +30,4 @@ export const Navbar = () => {
     </div>
   )
 }
+

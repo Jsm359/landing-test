@@ -45,7 +45,7 @@
 
 .title {
   opacity: .9;
-  color: white;
+  color: black;
   letter-spacing: .01em;
   line-height: 120%;
   font-weight: 800;
@@ -103,7 +103,7 @@
 
 .online-counter {
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.05);
+  background: gray;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@
   font-weight: 500;
   line-height: 120%;
   letter-spacing: .01em;
-  color: white;
+  color: black;
   opacity: .9;
 
   @include desktop {

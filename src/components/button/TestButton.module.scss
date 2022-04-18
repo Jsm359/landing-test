@@ -1,0 +1,104 @@
+@import '../../utils/utils';
+
+.wrapper {
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s background-position;
+  background: purple;
+  background-position-y: var(--y);
+  background-position-x: var(--x);
+  cursor: pointer;
+  user-select: none;
+
+  @include desktop {
+    width: viewWidth(419);
+    height: viewWidth(82);
+    border-radius: viewWidth(16);
+  }
+
+  @include mobile {
+    border-radius: widthM(8);
+    width: widthM(280);
+    height: widthM(43);
+  }
+
+  span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    line-height: 120%;
+    color: white;
+    opacity: .9;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    @include desktop {
+      font-size: viewWidth(24);
+      letter-spacing: .01em;
+      padding-top: 2.5px;
+    }
+
+    @include mobile {
+      font-size: widthM(16);
+      letter-spacing: .02em;
+    }
+  }
+
+  &:hover {
+    background-position-y: -500px;
+  }
+
+}
+
+
+.unfixed {
+  @include desktop {
+    display: none;
+  }
+  @include mobile {
+    animation: .5s unfixed ease-in-out;
+    bottom: -200px;
+    z-index: 12123;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+  }
+}
+
+.fixed {
+  @include mobile {
+    animation: .5s fixed;
+    position: fixed;
+    bottom: 20px;
+    z-index: 12123;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+
+@keyframes fixed {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+@keyframes unfixed {
+  0% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: -200px;
+  }
+}

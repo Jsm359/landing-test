@@ -2,7 +2,7 @@
 @import '../../utils/base';
 
 .nickname {
-  color: white;
+  color: black;
   @include desktop {
     margin-right: viewWidth(25);
   }

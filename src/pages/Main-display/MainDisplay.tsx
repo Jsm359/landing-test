@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styles from './MainDisplay.module.scss'
 import classnames from 'classnames/bind';
+import { TestButton } from '../../components/button/TestButton';
 
 const cx = classnames.bind(styles)
 
@@ -65,9 +66,11 @@ export const MainDisplay = () => {
               </div>
               <div className={cx('online-title')}>Игроков онлайн</div>
             </div>
+            <TestButton />
           </div>
         </div>
       </div>
+      <TestButton fixed/>
     </div>
   )
 }

@@ -13,6 +13,7 @@
   cursor: pointer;
   transition: .1s;
   z-index: 1111;
+  user-select: none;
 
   @include desktop {
     padding: viewWidth(11) viewWidth(23);
@@ -34,13 +35,13 @@
   }
 
   &:active {
-    background: #CB01CF;
+    background-color: #CB01CF;
     span {
-      background: linear-gradient(#FF41AC, #8017FF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: table;
+      color: black;
     }
   }
 }

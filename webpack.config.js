@@ -17,7 +17,8 @@ module.exports = {
               { loader: "css-modules-typescript-loader"},  
               { loader: "css-loader", options: { modules: true } },
               { loader: "sass-loader" },       
-            ] }, 
+            ] },
+            {}, 
             {test: /\.svg$/,
             loader: 'svg-sprite-loader'}
         ]

@@ -1,6 +1,11 @@
 @import "../../utils/base";
 @import "../../utils/utils";
 
-.container {
-  
+
+.wrapper {
+  height: calc(100vh - 67px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
