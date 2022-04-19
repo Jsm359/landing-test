@@ -3,12 +3,18 @@
 
 .nickname {
   color: black;
+  border: 1px solid #FF3693;
+  font-family: 'Raleway', 'sans-serif';
+  user-select: none;
   @include desktop {
     margin-right: viewWidth(25);
+    border-radius: viewWidth(8);
+    padding: viewWidth(7) viewWidth(15);
   }
 
   @include mobile {
     margin-right: widthM(25);
+    border-radius: widthM(8);
   }
 }
 
